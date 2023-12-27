@@ -1,0 +1,18 @@
+<div class="container container-size">
+    <div class = "row" >
+     
+      <div class="col-sm-6 card-size" *ngFor="let recipes of this.recipesList">
+        <div class="card" >
+            <img src="" class="card-img-top img-size" alt="Recipe Image">
+            <div class="card-body">
+              <h5 class="card-title">{{recipes.itemName}}</h5>
+              <p class="card-text">Ingredients : {{recipes.ingredients}}</p>
+              <p class="card-text">Category :{{recipes.category}}</p>
+              <p class="card-text">Price :{{recipes.price|currency}}</p>
+              <button  type="button" class="btn btn-sm btn-primary me-1" >Update</button>
+              <button  type="button" class="btn btn-sm btn-danger me-1" >Delete</button>
+            </div>
+            </div>
+      </div>
+    </div>
+    </div>

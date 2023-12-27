@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="p-3 mb-2 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h5 class="display-5 fw-bold">Users Dashboard</h5>
+        <!-- <div class="d-flex justify-content-end " >
+          <button type="button" class="btn btn-sm btn-dark" (click)="openModal(driversModal)">Add New</button>
+        </div> -->
+        
+        <table class="table table-hover">
+         
+          <thead>
+            <tr>
+              <th scope="col">User Id</th>
+              <th scope="col">User Name</th>
+              <th scope="col">User Email</th>
+              <th scope="col">User Phone</th>
+              <th scope="col">User Address</th>
+              <th scope="col">Foodie Cash</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let user of this.usersList">
+            <tr>
+              <td>{{user.userId}}</td>
+              <td>{{user.userName}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.phone}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.foodieCash|currency}}</td>
+              <td>
+                <button type="button" class="btn btn-sm btn-dark me-1" >Update</button>
+                <button type="button" class="btn btn-sm btn-danger me-1" >Delete</button>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+
+<!-- <ng-template #driversModal let-model>
+  <app-adddrivers [driverInfo]="driverInfo" (closeModel)="closeModal(driversModal)"></app-adddrivers>
+</ng-template> -->
+
+
